@@ -1,0 +1,115 @@
+footer {
+  margin-bottom: 70px;
+}
+
+footer .whitebackground {
+  background: $color6;
+}
+
+.flex-footer {
+  display: flex;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.right-footer,
+.left-footer {
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.right-footer {
+  padding: 60px 40px;
+  border-right: 1px solid $color4;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 18px 45px 18px 45px 18px 200px;
+    gap: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    border-right: none;
+    border-bottom: 1px solid $color4;
+  }
+}
+.left-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  div {
+    display: flex;
+    padding: 30px 20px 30px 40px;
+    align-items: center;
+    border-bottom: 1px solid $color4;
+
+    h5 {
+      width: 25%;
+
+      @media screen and (max-width: 768px) {
+        width: 35%;
+      }
+    }
+    p {
+      width: 75%;
+      font-size: 0.8rem;
+      line-height: 2;
+      color: $color3;
+
+      @media screen and (max-width: 768px) {
+        width: 60%;
+      }
+    }
+  }
+
+  a {
+    margin-right: 10px;
+    color: $color2;
+    border: 1px solid $color4;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.twitter:hover {
+  background-color: #03d0fc;
+  border-color: #03d0fc;
+  color: $color1;
+}
+.facebook:hover {
+  background-color: #1877f2;
+  border-color: #1877f2;
+  color: $color1;
+}
+.instagram:hover {
+  background: linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
+  border-color: #fffaee;
+  color: $color1;
+}
+.github:hover {
+  background: $color2;
+  border-color: $color2;
+  color: $color1;
+}
+
+.social h5 {
+  width: 25% !important;
+
+  @media screen and (max-width: 768px) {
+    width: 25% !important;
+  }
+}
