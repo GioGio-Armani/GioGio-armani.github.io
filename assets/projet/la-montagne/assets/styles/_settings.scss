@@ -23,7 +23,13 @@ $color6: rgb(225, 225, 225);
 }
 body {
   font-family: "font1", sans-serif;
-  background: url(../images/bg.jpg) center/cover fixed;
+  background: url(../images/bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 h1,
 h2,
