@@ -23,6 +23,12 @@ body {
   background-attachment: fixed;
   background-position: center center;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    /* Styles pour Safari sur iOS en mode portrait */
+    background-attachment: scroll;
+  }
+}
 
 h1,
 h2,
