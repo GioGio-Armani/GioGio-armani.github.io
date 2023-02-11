@@ -18,7 +18,10 @@
 
 body {
   font-family: "font1", sans-serif;
-  background: url(../images/bg.jpg) center/cover fixed;
+  background: url(../images/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 h1,
@@ -132,14 +135,7 @@ header::before {
   background: rgb(25, 25, 25);
   z-index: -1;
   opacity: 1;
-  -webkit-animation: backanim 1s ease forwards;
-          animation: backanim 1s ease forwards;
-}
-
-@-webkit-keyframes backanim {
-  100% {
-    opacity: 0;
-  }
+  animation: backanim 1s ease forwards;
 }
 
 @keyframes backanim {
@@ -187,15 +183,8 @@ nav ul {
   align-items: center;
   height: 100%;
   padding-top: 70px;
-  -webkit-animation: animtitle 1.5s ease forwards;
-          animation: animtitle 1.5s ease forwards;
+  animation: animtitle 1.5s ease forwards;
   transform: translateY(50px);
-}
-
-@-webkit-keyframes animtitle {
-  100% {
-    transform: translateY(0);
-  }
 }
 
 @keyframes animtitle {
@@ -457,7 +446,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .left-part,
-.right-part {
+  .right-part {
     width: 100%;
   }
 }
@@ -498,7 +487,7 @@ footer .whitebackground {
 }
 @media screen and (max-width: 768px) {
   .right-footer,
-.left-footer {
+  .left-footer {
     width: 100%;
   }
 }
