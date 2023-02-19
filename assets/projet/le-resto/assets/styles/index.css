@@ -1,0 +1,886 @@
+@font-face {
+  font-family: "font1";
+  src: url(/assets/projet/le-resto/assets/font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(/assets/projet/le-resto/assets/font/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "font3";
+  src: url(/assets/projet/le-resto/assets/font/Poppins-Medium.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "font1";
+  background-color: #21201e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "font3";
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+.font2 {
+  font-family: "font2";
+  text-transform: none;
+  color: #a67245;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: center;
+}
+
+.flex3 {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes animlink {
+  50% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+header {
+  background: url(/assets/projet/le-resto/assets/img/bg-slider-06.jpg) no-repeat center center/cover;
+  height: 100vh;
+}
+header .navbar {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .navbar .logo {
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 17%;
+}
+header .navbar .logo h1 {
+  color: #eeeeee;
+}
+header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+header .navbar ul li {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+header .navbar ul li a {
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+  position: relative;
+}
+header .navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #a67245;
+  transition: 0.2s ease-in-out infinite;
+  transform-origin: left;
+  left: 0;
+  bottom: 0;
+}
+header .navbar ul li a:hover {
+  color: #a67245;
+}
+header .navbar ul li a:hover:hover::after {
+  animation: animlink 1.4s ease-in-out infinite;
+  width: 100%;
+}
+@media screen and (max-width: 850px) {
+  header .navbar ul {
+    display: none;
+  }
+}
+header .navbar .icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  width: 13%;
+  color: #eeeeee;
+}
+header .navbar .icons i {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+header .navbar .icons i:hover {
+  color: #a67245;
+}
+@media screen and (max-width: 850px) {
+  header .navbar {
+    padding: 25px 40px 0;
+  }
+}
+header .hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .hero .hero-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+header .hero .hero-text h1 {
+  font-size: 4rem;
+  color: #eeeeee;
+  letter-spacing: 12px;
+  line-height: 0.8;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 850px) {
+  header .hero .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+header .hero .hero-text h2 {
+  font-size: 3.8rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  line-height: 0.6;
+}
+@media screen and (max-width: 850px) {
+  header .hero .hero-text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+  }
+}
+header .hero .hero-text img {
+  width: 35px;
+  margin-bottom: 50px;
+}
+header .hero .hero-text p {
+  font-size: 0.95rem;
+  color: #eeeeee;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.discover {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.discover .left-part {
+  text-align: center;
+  background-color: #eeeeee;
+  color: #21201e;
+}
+.discover .left-part .flex-dashed {
+  margin: 20px;
+  padding: 20px;
+  border: 1px dashed #a67245;
+}
+.discover .left-part h2 {
+  font-size: 2.5rem;
+  line-height: 0.7;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.discover .left-part h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.discover .left-part .couvert {
+  width: 35px;
+  margin-bottom: 30px;
+}
+.discover .left-part p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+.discover .left-part img {
+  border-radius: 50%;
+  width: 100px;
+}
+.discover .left-part .cooker {
+  text-transform: none;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.discover .left-part .poste {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #b6b6b6;
+}
+.discover .right-part {
+  background: url(/assets/projet/le-resto/assets/img/store-01.jpg) center/cover;
+}
+@media screen and (max-width: 768px) {
+  .discover .right-part {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discover {
+    grid-template-columns: 100%;
+  }
+}
+
+.menu {
+  padding: 0 20px 150px;
+}
+.menu h3 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 500;
+  margin: 70px 0 30px;
+  text-align: center;
+}
+.menu .couvert {
+  display: block;
+  margin: 0 auto 30px;
+  width: 35px;
+}
+.menu .menu-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu ul li {
+  font-size: 1.25rem;
+  margin: 0 0 35px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #eeeeee;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.menu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  transition: 0.2s ease-in-out infinite;
+  transform-origin: left;
+  left: 0;
+  bottom: 0px;
+}
+.menu ul li:hover {
+  color: #a67245;
+  transform: scale(1.1);
+}
+.menu ul li:hover::after {
+  background-color: #a67245;
+  animation: animlink 1.4s ease-in-out infinite;
+}
+@media screen and (max-width: 768px) {
+  .menu ul li {
+    font-size: 0.9rem;
+  }
+}
+
+.carte {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background: #eeeeee;
+  padding: 20px 0;
+  border-top: 5px solid #a67245;
+}
+.carte .left-cart {
+  width: 50%;
+  padding: 0 20px;
+}
+.carte .right-cart {
+  width: 50%;
+  padding: 0 20px;
+}
+.carte .plat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10px;
+  border-bottom: 1px dashed #b6b6b6;
+}
+.carte .plat .img-text {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  width: 85%;
+}
+.carte .plat .img-text img {
+  border-radius: 50%;
+}
+.carte .plat .img-text h4 {
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  color: #21201e;
+  margin-bottom: 5px;
+  line-height: 1;
+  font-family: "font1", sans-serif;
+}
+.carte .plat .img-text p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #21201e;
+}
+@media screen and (max-width: 768px) {
+  .carte .plat .img-text p {
+    font-size: 1.2rem;
+  }
+}
+.carte .plat .price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #a67245;
+}
+@media screen and (max-width: 768px) {
+  .carte {
+    flex-direction: column;
+  }
+  .carte .left-cart {
+    width: 100%;
+  }
+  .carte .right-cart {
+    width: 100%;
+  }
+}
+
+.section-menu {
+  position: relative;
+}
+.section-menu .background-fun {
+  background: url(/assets/projet/le-resto/assets/img/bg-menu-01.jpg) center/cover;
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.reservation {
+  padding: 0 20px;
+}
+
+.gird {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  max-width: 1300px;
+  margin: 80px auto 150px;
+}
+@media screen and (max-width: 1100px) {
+  .gird {
+    grid-template-columns: 100%;
+  }
+}
+.gird .left-reservation {
+  background: #000;
+  padding: 30px;
+}
+.gird .left-reservation .dashed {
+  border: 1px dashed #eeeeee;
+  padding: 40px;
+}
+.gird .left-reservation h3 {
+  font-size: 1.7rem;
+  line-height: 0.8;
+  font-weight: 900;
+  text-align: center;
+  color: #eeeeee;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+.gird .left-reservation h3 .font2 {
+  font-size: 2.9rem;
+  font-weight: 300;
+  color: #a67245;
+}
+.gird .left-reservation img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.gird .left-reservation h4 {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  color: #a67245;
+  margin-bottom: 20px;
+}
+.gird .left-reservation h4:last-child {
+  margin-bottom: 0px;
+}
+.gird .left-reservation p {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+  color: #eeeeee;
+  margin-bottom: 50px;
+}
+.gird .right-reservation {
+  background: #eeeeee;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gird .right-reservation h3 {
+  font-size: 2rem;
+  line-height: 0.8;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.gird .right-reservation h3 .font2 {
+  font-size: 2.9rem;
+  font-weight: 300;
+}
+.gird .right-reservation img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.gird .right-reservation .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 60px;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .gird .right-reservation .form {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+.gird .right-reservation .form input,
+.gird .right-reservation .form select,
+.gird .right-reservation .form input:active,
+.gird .right-reservation .form input:focus-visible,
+.gird .right-reservation .form select:active,
+.gird .right-reservation .form select:focus-visible {
+  background: transparent;
+  padding: 10px 0px;
+  border: none;
+  border-bottom: #b6b6b6 1px solid;
+  font-size: 1rem;
+  outline: none;
+}
+.gird .right-reservation .form #date,
+.gird .right-reservation .form #time,
+.gird .right-reservation .form select {
+  cursor: pointer;
+}
+.gird .right-reservation button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: #21201e;
+  color: #eeeeee;
+  border-radius: 100px;
+  border: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.gird .right-reservation button:hover {
+  background: #a67245;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 850px) {
+  .event {
+    display: none;
+  }
+}
+.event h3 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #eeeeee;
+  letter-spacing: 2px;
+}
+.event h3 .font2 {
+  font-size: 2.9rem;
+  font-weight: 300;
+}
+.event img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.event .gird-event {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 1.3fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 30px;
+  grid-template-areas: "e1 e1 e3" "e2 e2 e3";
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.event .gird-event .event1 {
+  grid-area: e1;
+}
+.event .gird-event .event2 {
+  grid-area: e2;
+}
+.event .gird-event .event3 {
+  grid-area: e3;
+}
+.event .gird-event .left-event {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background: #eeeeee;
+}
+.event .gird-event .left-event .img-event {
+  width: 40%;
+  position: relative;
+}
+.event .gird-event .left-event .img-event img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+  height: 100%;
+}
+.event .gird-event .left-event .date-event {
+  position: absolute;
+  background: #21201e;
+  left: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.event .gird-event .left-event .date-event h4 {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #eeeeee;
+}
+.event .gird-event .left-event .date-event p {
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #eeeeee;
+}
+.event .gird-event .left-event .text-event h4 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #21201e;
+  margin-bottom: 30px;
+  text-transform: none;
+  text-indent: 15px;
+  font-family: "font1", sans-serif;
+}
+.event .gird-event .left-event .text-event p {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #b6b6b6;
+  margin-bottom: 30px;
+}
+.event .gird-event .left-event .text-event a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #21201e;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.event .gird-event .left-event .text-event a:hover {
+  color: #a67245;
+}
+.event .gird-event .event3 {
+  background: url(/assets/projet/le-resto/assets/img/event-03.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event .gird-event .event3 .text-event3 {
+  background: #eeeeee;
+  height: 88%;
+  width: 88%;
+  position: relative;
+}
+.event .gird-event .event3 .text-event3 .date-event3 {
+  position: absolute;
+  background: #21201e;
+  left: 20;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.event .gird-event .event3 .text-event3 .date-event3 h4 {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #eeeeee;
+  margin: 0;
+}
+.event .gird-event .event3 .text-event3 .date-event3 p {
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #eeeeee;
+  margin: 0;
+}
+.event .gird-event .event3 .text-event3 h4 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+  color: #21201e;
+  margin-bottom: 30px;
+  text-transform: none;
+  text-align: center;
+  margin-top: 35%;
+  font-family: "font1", sans-serif;
+}
+.event .gird-event .event3 .text-event3 p {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #b6b6b6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.event .gird-event .event3 .text-event3 a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #21201e;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  text-align: center;
+  margin-top: 70px;
+}
+.event .gird-event .event3 .text-event3 a:hover {
+  color: #a67245;
+}
+
+.section-about {
+  position: relative;
+  padding: 200px 20px 300px;
+}
+@media screen and (max-width: 768px) {
+  .section-about {
+    padding: 0 20px 200px;
+  }
+}
+.section-about .background-about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 440px;
+  background: url(/assets/projet/le-resto/assets/img/gmap.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #eeeeee;
+  padding: 80px 30px;
+  position: relative;
+}
+.about img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  width: 80px;
+}
+.about p {
+  font-size: 1.3rem;
+  line-height: 2;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.about h3 {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: none;
+  font-family: "font1", sans-serif;
+}
+.about .metier {
+  color: #a67245;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .about p {
+    font-size: 1rem;
+  }
+  .about h3 {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  background: url(/assets/projet/le-resto/assets/img/bg-footer.jpg) no-repeat center/cover;
+}
+footer .footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .left-footer {
+  width: 50%;
+  padding: 60px 60px 60px 0;
+}
+footer .left-footer h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+footer .left-footer p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 2;
+  color: #eeeeee;
+}
+footer .right-footer {
+  width: 50%;
+  padding: 60px 0 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer .right-footer .newsletter h3 {
+  color: #eeeeee;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-family: "font1", sans-serif;
+}
+footer .right-footer .newsletter input {
+  width: 60%;
+  padding: 10px 20px;
+  border: 1px solid #352c24;
+  background: transparent;
+  color: #eeeeee;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+}
+footer .right-footer .social h3 {
+  color: #eeeeee;
+  margin-right: 10px;
+  font-family: "font1", sans-serif;
+  font-weight: 900;
+}
+footer .right-footer .flex-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+footer .right-footer .flex-social a {
+  color: #595956;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+footer .right-footer .flex-social a:hover {
+  color: #eeeeee;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    background-position: right;
+  }
+  .flex2 {
+    flex-direction: column;
+  }
+  .flex2 .left-footer {
+    display: none;
+  }
+  .flex2 .right-footer {
+    width: 100%;
+    padding: 60px;
+  }
+  .flex2 .right-footer input {
+    margin-bottom: 60px;
+    min-width: 200px;
+  }
+}/*# sourceMappingURL=index.css.map */

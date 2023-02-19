@@ -1,0 +1,137 @@
+header {
+  background: url(/assets/projet/le-resto/assets/img/bg-slider-06.jpg) no-repeat
+    center center/cover;
+  height: 100vh;
+
+  .navbar {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 20px 0;
+    @include flexsbaic;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .logo {
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 17%;
+
+      h1 {
+        color: $color1;
+      }
+    }
+
+    ul {
+      @include flexsbaic;
+      width: 70%;
+
+      li {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+
+        a {
+          padding: 10px 0;
+          border-bottom: 2px solid transparent;
+          transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: $color3;
+            transition: 0.2s ease-in-out infinite;
+            transform-origin: left;
+            left: 0;
+            bottom: 0;
+          }
+
+          &:hover {
+            color: $color3;
+            &:hover::after {
+              animation: animlink 1.4s ease-in-out infinite;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 25px;
+      width: 13%;
+      color: $color1;
+
+      i {
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $color3;
+        }
+      }
+    }
+    @media screen and (max-width: 850px) {
+      padding: 25px 40px 0;
+    }
+  }
+
+  .hero {
+    height: 100%;
+    @include flexcenter;
+
+    .hero-text {
+      text-align: center;
+      margin-bottom: 40px;
+
+      h1 {
+        font-size: 4rem;
+        color: $color1;
+        letter-spacing: 12px;
+        line-height: 0.8;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 850px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 3.8rem;
+        letter-spacing: normal;
+        font-weight: 400;
+        line-height: 0.6;
+
+        @media screen and (max-width: 850px) {
+          font-size: 2.3rem;
+          margin-bottom: 40px;
+        }
+      }
+
+      img {
+        width: 35px;
+        margin-bottom: 50px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: $color1;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+      }
+    }
+  }
+}

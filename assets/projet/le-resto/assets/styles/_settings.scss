@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "font1";
+  src: url(/assets/projet/le-resto/assets/font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(/assets/projet/le-resto/assets/font/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "font3";
+  src: url(/assets/projet/le-resto/assets/font/Poppins-Medium.ttf);
+}
+$font1: "font1", sans-serif;
+$font2: "font2", sans-serif;
+$font3: "font3", sans-serif;
+$color1: #eeeeee;
+$color2: #21201e;
+$color3: #a67245;
+$grey1: #b6b6b6;
+$grey2: #595956;
+
+@mixin flexsbaic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexcolumncenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "font1";
+  background-color: $color2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "font3";
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $color1;
+}
+.font2 {
+  font-family: "font2";
+  text-transform: none;
+  color: $color3;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: center;
+}
+.flex3 {
+  display: flex;
+  align-items: center;
+}
+@keyframes animlink {
+  50% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
