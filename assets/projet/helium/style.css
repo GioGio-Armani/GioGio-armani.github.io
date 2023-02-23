@@ -7,11 +7,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 body {
   font-family: "Inter", sans-serif;
   background: #1d1d1d;
   color: var(--color1);
+  overflow: hidden;
+}
+
+li {
+  z-index: 4;
+}
+
+button {
+  z-index: 4;
 }
 
 /* Navbar */
@@ -36,11 +46,11 @@ nav ul {
 }
 nav ul li {
   font-size: 0.9rem;
-  cursor: pointer;
   transition: color 0.2s ease-in-out;
 }
 nav ul li:hover {
   color: var(--color2);
+  transform: scale(1.1);
 }
 
 /* header */
@@ -112,7 +122,6 @@ nav ul li:hover {
   background: var(--color2);
   color: var(--color1);
   font-weight: 600;
-  cursor: pointer;
   transition: background 0.2s ease-in-out;
   font-family: "Inter", sans-serif;
 }
@@ -199,4 +208,37 @@ nav ul li:hover {
   .img-container img {
     height: 30px;
   }
+}
+
+.rond1 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #474dffaf;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.rond2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fefefe;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: 0.1s ease-out;
+}
+
+.rond3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #0d0d0d7f;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease-out;
 }
